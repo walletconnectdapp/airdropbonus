@@ -1,0 +1,62 @@
+
+
+.text-rows {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: none;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.left {
+  font-weight: 500;
+  color: #6c7981;
+}
+
+.right {
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.airdrop-card {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: #fff;
+    width: 220px;
+    background: #070f2b42;
+    margin-bottom: 28px;
+  }
+  .icon {
+    background: #070f2b96;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+  }
+  
+  .icon img {
+    width: 25px;
+  }
+  
+  .text .amout {
+    margin: 0;
+  }
+  
+  .text .label {
+    color: #888;
+    margin: 0;
+  }
+    
+

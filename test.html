@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reward Details</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #0077ff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      color: #0077ff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Welcome, <span class="name"></span>!</h1>
+    <p><span class="name"></span>, here are your reward details.</p>
+    <p>You have received <span class="highlight amount"></span> USDT as your latest airdrop reward 🎉</p>
+    <p>Thank you, <span class="name"></span>, for being part of our community!</p>
+  </div>
+
+  <script>
+    // Get URL query parameters (?name=John&amount=0.134)
+    const params = new URLSearchParams(window.location.search);
+
+    const name = params.get("name") || "Name";
+    const amount = params.get("amount") || "0.000";
+
+    // Capitalize first letter of name
+    const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
+
+    // Format amount to 3 decimal places if it's numeric
+    const formattedAmount = !isNaN(amount) ? parseFloat(amount).toFixed(3) : amount;
+
+    // Update all name placeholders
+    document.querySelectorAll(".name").forEach(el => {
+      el.textContent = formattedName;
+    });
+
+    // Update all amount placeholders
+    document.querySelectorAll(".amount").forEach(el => {
+      el.textContent = formattedAmount;
+    });
+  </script>
+</body>
+</html>
+
+
